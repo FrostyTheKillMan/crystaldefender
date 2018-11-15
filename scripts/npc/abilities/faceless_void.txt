@@ -19,7 +19,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"24 18 12 6"
+		"AbilityCooldown"				"21 18 15 12 9 6 3"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -41,13 +41,13 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"					"675"
+				"range"					"575 650 725 800 875 950 1025"
 				"LinkedSpecialBonus"	"special_bonus_unique_faceless_void"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"backtrack_duration"	"2.0"
+				"backtrack_duration"			"2.0"
 			}
 			"04"
 			{
@@ -105,22 +105,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.0"
+				"duration"				"0.25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_creep"		"2.0"
+				"duration_creep"		"0.25"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_pct"			"10 15 20 25"
+				"chance_pct"			"12 15 18 21 24 27 30"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"50 75 100 125"
+				"bonus_damage"			"50 75 100 125 150 175 200"
 				"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_3"
 			}
 		}
@@ -140,7 +140,7 @@
 		"AbilitySound"					"Hero_FacelessVoid.TimeDilation.Cast"
 
 		"AbilityCastPoint"				"0.1"
-		"AbilityCooldown"				"40 34 28 22"
+		"AbilityCooldown"				"55 40 35 30 25 20 15"
 		"AbilityManaCost"				"75"	
 				
 		
@@ -156,7 +156,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"6 8 10 12"
+				"duration"				"6 7 8 9 10 11 12"
 			}					
 			"03"
 			{
@@ -180,6 +180,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_FacelessVoid.Chronosphere"
 
 		"HasScepterUpgrade"			"1"
@@ -192,11 +194,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"140.0 130.0 120.0"
+		"AbilityCooldown"				"140.0 130.0 120.0 110.0 100.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150 225 300"
+		"AbilityManaCost"				"150 225 300 375 450"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -215,12 +217,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"4.0 4.5 5.0"
+				"duration"				"4.0 4.5 5.0 5.5 6.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_scepter"		"4.0 4.5 5.0"
+				"duration_scepter"		"5.0 5.5 6.0 6.5 7.0"
 			}
 			"04"
 			{
@@ -235,7 +237,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"0"
+				"bonus_attack_speed"	"25"
 			}
 		}
 	}
