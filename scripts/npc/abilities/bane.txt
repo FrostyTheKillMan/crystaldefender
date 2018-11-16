@@ -165,7 +165,7 @@
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"fiend_grip_damage"				"100 150 200 250 300"
+				"fiend_grip_damage"				"250 500 750 1000 1250"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
