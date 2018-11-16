@@ -27,11 +27,11 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"90 140 190 240"
+		"AbilityDamage"					"80 90 100 110 120 130 140"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 75 75 75"
+		"AbilityManaCost"				"75 75 75 75 75 75 75"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movement_slow"				"-25 -35 -45 -55"
+				"movement_slow"				"-25 -25 -25 -25 -25 -25 -25"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -71,12 +71,12 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+		"AbilityCooldown"				"10.0 10.0 10.0 10.0 10.0 10.0 10.0"
 		"AbilityDuration"				"20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"45 55 65 75"
+		"AbilityManaCost"				"45 55 65 75 85 95 105"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -85,12 +85,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_attacks"				"4 5 6 7"
+				"max_attacks"				"4 5 6 7 8 9 10"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_speed_bonus_pct"	"400 400 400 400"
+				"attack_speed_bonus_pct"	"400 400 400 400 400 400 400"
 			}
 			"03"
 			{
@@ -132,7 +132,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"				"15 20 25 30"
+				"damage_per_stack"				"10 15 20 25 30 35 40"
 				"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 			}
 		}
@@ -152,6 +152,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_Ursa.Enrage"
 
 		"HasScepterUpgrade"			"1"
@@ -163,7 +165,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50 40 30"
+		"AbilityCooldown"				"60 50 40 30 20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -176,12 +178,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"enrage_multiplier"			"1.5 1.75 2.0"
+				"enrage_multiplier"			"1.25 1.5 1.75 2.0 2.25"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_reduction"			"80"
+				"damage_reduction"			"80 85 90 95 100"
 			}
 			"03"
 			{
@@ -192,7 +194,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"30 24 18"
+				"cooldown_scepter"			"36 30 24 18 12"
 			}
 		}
 	}
