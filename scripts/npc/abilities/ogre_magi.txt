@@ -28,7 +28,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 85 95 105"
+		"AbilityManaCost"				"75 85 95 105 115 125 135"
 
 		
 		// Special
@@ -49,7 +49,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"fireblast_damage"		"60 120 180 240"
+				"fireblast_damage"		"60 120 180 240 300 360 420"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_2"
 			}
 		}
@@ -115,7 +115,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"fireblast_damage"		"275"
+				"fireblast_damage"		"450"
 			}
 		}
 	}
@@ -157,19 +157,19 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"5 6 7 8"
+				"duration"			"5 6 7 8 9 10 11"
 			}
 
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"burn_damage"		"26 34 42 50"
+				"burn_damage"		"26 34 42 50 58 66 74"
 			}		
 
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"slow_movement_speed_pct"		"-20 -22 -24 -26"
+				"slow_movement_speed_pct"		"-20 -22 -24 -26 -28 -30 -32"
 			}
 
 			"04"
@@ -209,7 +209,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"30"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -227,18 +227,18 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"10 12 14 16"
+				"bonus_movement_speed"		"10 12 14 16 18 20 22"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"30 40 50 60"
+				"bonus_attack_speed"	"30 40 50 60 70 80 90"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"self_bonus"	"30 50 70 90"
+				"self_bonus"	"30 50 70 90 100 110 120"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
 			}
 			"05"
@@ -261,7 +261,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityCastAnimation"			"ACT_INVALID"
-
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -269,66 +270,76 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_2_times"		"0.6 0.6 0.6"
+				"multicast_2_times"		"0.6 0.6 0.6 0.6 0.5"
 			}
 
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_3_times"		"0 0.3 0.3"
+				"multicast_3_times"		"0 0.3 0.3 0.25 0.2"
 			}
 
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_4_times"		"0 0 0.15"
+				"multicast_4_times"		"0 0 0.15 0.2 0.25"
 			}
-
 			"04"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"fireblast_cooldown"	"2 4 6"
+				"var_type"				"FIELD_FLOAT"
+				"multicast_8_times"		"0 0 0 0 0.05"
 			}
 
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"ignite_aoe"		"150 300 450"
-			}
-			
-			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"ignite_cast_range"	"150 300 450"
+				"fireblast_cooldown"	"2 4 6 8 10"
 			}
 
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"ignite_aoe"		"150 300 450 600 750"
+			}
+			
 			"07"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"bloodlust_aoe"			"575"
+				"var_type"			"FIELD_INTEGER"
+				"ignite_cast_range"	"150 300 450 600 750"
 			}
 
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bloodlust_cooldown"	"5 10 15"
+				"bloodlust_aoe"			"575"
 			}
+
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_2_times_tooltip"		"60"
+				"bloodlust_cooldown"	"5 10 15 20 25"
 			}
-
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_3_times_tooltip"		"0 30 30"
+				"multicast_2_times_tooltip"		"60 60 60 60 50"
 			}
 
 			"11"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_4_times_tooltip"		"0 0 15"
+				"multicast_3_times_tooltip"		"0 30 30 25 20"
+			}
+
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_4_times_tooltip"		"0 0 15 20 25"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_8_times_tooltip"		"0 0 0 0 5"
 			}
 			
 
