@@ -25,7 +25,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"75 75 75 75"
 		
-		"AbilityDuration"				"3 4 5 6"
+		"AbilityDuration"				"3 4 5 6 7 8 9"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -34,12 +34,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed_bonus"	"40 50 60 70"
+				"attack_speed_bonus"	"40 50 60 70 80 90 100"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"3.0 4.0 5.0 6.0"
+				"duration"				"3.0 4.0 5.0 6.0 7.0 8.0 9.0"
 				"LinkedSpecialBonus"	"special_bonus_unique_lifestealer"
 			}
 		}
@@ -64,7 +64,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_leech_percent"		"4.5 5.5 6.5 7.5"
+				"hp_leech_percent"		"4.0 4.5 5.0 5.5 6.0 6.5 7.0"
 				"LinkedSpecialBonus"	"special_bonus_unique_lifestealer_3"
 			}
 		}
@@ -90,15 +90,15 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.2"
-		"AbilityCastRange"				"200 300 400 500"
+		"AbilityCastRange"				"200 300 400 500 600 700 800"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"24 20 16 12"
+		"AbilityCooldown"				"32 28 24 20 16 12 8"
 		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"				"8 8 8 8"
+		"AbilityDuration"				"8 8 8 8 8 8 8"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -116,7 +116,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_percent"			"50"
+				"heal_percent"			"40 50 60 70 80 90 100"
 				"LinkedSpecialBonus"	"special_bonus_unique_lifestealer_2"
 			}
 			"03"
@@ -132,7 +132,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_range"			"200 300 400 500"
+				"tooltip_range"			"200 300 400 500 600 700 800"
 			}
 		}
 	}
@@ -154,6 +154,8 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"1"
+		"LevelsBetweenUpgrades"         "6"
+      		  "MaxLevel"                      "5"
 		"AbilitySound"					"Hero_LifeStealer.Infest"
 
 		// Casting
@@ -163,7 +165,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"100 75 50"
+		"AbilityCooldown"				"100 80 60 40 20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -180,12 +182,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"700 700 700"
+				"radius"				"700 700 700 700 700"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"150 275 400"
+				"damage"				"150 300 450 600 750"
 			}
 			"03"
 			{
@@ -205,7 +207,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cooldown_scepter"	"25"
+				"cooldown_scepter"	"15"
 			}
 		}
 	}
@@ -251,7 +253,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"300"
+				"damage"				"500"
 			}
 			"02"
 			{
@@ -292,7 +294,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_tooltip"				"300"
+				"damage_tooltip"				"500"
 			}
 			"02"
 			{
