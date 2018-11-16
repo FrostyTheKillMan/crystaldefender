@@ -29,7 +29,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 100 110 120"
+		"AbilityManaCost"				"90 100 110 120 130 140 150"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -42,12 +42,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"0.8"
+				"stun_duration"			"0.25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"beam_damage"			"75 150 225 300"
+				"beam_damage"			"150 225 300 375 450 525 600"
 				"LinkedSpecialBonus"	"special_bonus_unique_luna_1"
 			}
 		}
@@ -73,17 +73,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"range"						"500"
+				"range"						"500 600 700 800 900 1000 1100"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bounces"					"1 2 3 6"
+				"bounces"					"2 4 6 8 10 12 14"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_reduction_percent"	"35"
+				"damage_reduction_percent"	"50 46 42 38 34 30 26"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -106,18 +106,18 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"900 900 900 900"
+				"radius"				"900 900 900 900 900 900 900"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"14 22 30 38"
-				"LinkedSpecialBonus"	"special_bonus_unique_luna_3"
+				"bonus_damage"				"18 24 32 40 48 56 64"
+				"LinkedSpecialBonus"			"special_bonus_unique_luna_3"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_night_vision"		"250 500 750 1000"
+				"bonus_night_vision"			"250 500 750 1000 1250 1500 1750"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -139,6 +139,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+        	"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_Luna.Eclipse.Cast"
 
 		"HasScepterUpgrade"			"1"
@@ -155,7 +157,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150 200 250"
+		"AbilityManaCost"				"150 200 250 300 350"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -164,27 +166,27 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"beams"						"5 8 11"
+				"beams"						"10 12 14 16 18"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"hit_count"					"5"
+				"hit_count"					"3"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"beam_interval"				"0.6 0.6 0.6"
+				"beam_interval"				"0.6 0.5 0.4 0.3 0.2"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"beam_interval_scepter"				"0.3"
+				"beam_interval_scepter"				"0.1"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_tooltip"			"2.4 4.2 6.0"
+				"duration_tooltip"			"6.0 6.0 5.6 4.8 3.6"
 			}
 			"06"
 			{
@@ -194,17 +196,17 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"beams_scepter"				"6 12 18"
+				"beams_scepter"					"12 18 24 30 36"
 			}
 			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"hit_count_scepter"			"6 12 18"
+				"hit_count_scepter"				"6 9 12 15 18"
 			}
 			"09"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_tooltip_scepter"	"1.8 3.6 5.4"
+				"duration_tooltip_scepter"		"1.2 1.8 2.4 3.0 3.6"
 			}
 			"10"
 			{
