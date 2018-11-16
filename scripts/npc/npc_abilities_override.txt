@@ -1,4 +1,5 @@
 // Dota Abilities Override File
+#base "abilities/base.txt"
 #base "abilities/abaddon.txt"
 #base "abilities/abyssal_underlord.txt"
 #base "abilities/alchemist.txt"
