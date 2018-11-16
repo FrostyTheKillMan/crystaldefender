@@ -20,10 +20,10 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"625 700 775 850"
+		"AbilityCastRange"				"625 700 775 850 925 1000 1075"
 		"AbilityCastPoint"				"0.35"
-		"AbilityCooldown"				"11 10 9 8"
-		"AbilityManaCost"				"70 90 110 130"
+		"AbilityCooldown"				"13 12 11 10 9 8 7"
+		"AbilityManaCost"				"70 90 110 130 150 170"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -37,12 +37,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"3 4 5 6"
+				"duration"				"1 1.5 2 2.5 3 3.5 4"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip"				"625 700 775 850"
+				"cast_range_tooltip"				"625 700 775 850 925 1000 1075"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -63,9 +63,9 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"3 3 3 3"
-		"AbilityCooldown"				"50 40 30 20"
-		"AbilityManaCost"				"50 50 50 50"
+		"AbilityCastPoint"				"3 3 3 3 3 3 3"
+		"AbilityCooldown"				"80 70 60 50 40 30 20"
+		"AbilityManaCost"				"50 50 50 50 50 50 50"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	
@@ -83,9 +83,9 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"750"
-		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
-		"AbilityCooldown"				"37 37 37 37"
-		"AbilityManaCost"				"130 140 150 160"
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
+		"AbilityCooldown"				"37 37 37 37 37 37 37"
+		"AbilityManaCost"				"130 140 150 160 170 180 190"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -94,18 +94,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"area_of_effect"		"150 225 300 375"
+				"area_of_effect"		"150 225 300 375 450 525 600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_treants"			"2 3 4 5"
+				"max_treants"			"2 3 4 5 6 7 8"
 				"LinkedSpecialBonus"	"special_bonus_unique_furion_2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"60 60 60 60"
+				"duration"				"60 60 60 60 60 60 60"
 			}
 			"04"
 			{
@@ -115,12 +115,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"treant_min_dmg_tooltip"				"30"
+				"treant_min_dmg_tooltip"				"30 30 30 30 34 38 44"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"treant_max_dmg_tooltip"				"34"
+				"treant_max_dmg_tooltip"				"34 34 34 34 38 42 48"
 			}
 			"07"
 			{
@@ -160,6 +160,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_Furion.WrathOfNature_Cast"
 
 		"HasScepterUpgrade"			"1"
@@ -172,11 +174,11 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"175 225 275"
+		"AbilityManaCost"				"175 225 275 325 375"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -185,17 +187,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_targets"			"16"
+				"max_targets"			"12 14 16 18 20"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"110 140 170"
+				"damage"				"110 140 170 200 230"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_percent_add"	"11"
+				"damage_percent_add"	"11 11 11 12 13"
 			}
 			"04"
 			{
@@ -205,7 +207,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_scepter"		"135 170 205"
+				"damage_scepter"		"135 170 205 240 275"
 			}
 			"06"
 			{
