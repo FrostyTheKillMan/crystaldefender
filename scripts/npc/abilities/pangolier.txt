@@ -20,11 +20,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 16 12 8"
+		"AbilityCooldown"				"18 16 14 12 10 8 6"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 90 100 110"
+		"AbilityManaCost"				"80 90 100 110 120 130 140"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"24 42 60 78"
+				"damage"				"42 49 56 63 70 77 84"
 				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_3"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -55,7 +55,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"attack_interval"		"0.1 0.1 0.1 0.1"
+				"attack_interval"		"0.28 0.24 0.2 0.16 0.12 0.08 0.04"
 			}
 			"06"
 			{
@@ -70,7 +70,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"strikes"				"4"
+				"strikes"				"2 3 4 5 6 7 8 "
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -97,11 +97,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"19 17 15 13"
+		"AbilityCooldown"				"19 17 15 13 11 9 7"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 100 110 120"
+		"AbilityManaCost"				"90 100 110 120 130 140 150"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -110,17 +110,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"75 150 225 300"
+				"damage"				"75 150 225 300 375 450 525"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hero_stacks"			"9 12 15 18"
+				"hero_stacks"				"5 8 11 14 17 20 23"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"10.0"
+				"duration"				"5.0"
 			}
 			"04"
 			{
@@ -130,27 +130,27 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"jump_duration"			"0.4"
+				"jump_duration"				"0.4"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"jump_duration_gyroshell"	"0.75"
+				"jump_duration_gyroshell"		"0.75"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"jump_height"			"250"
+				"jump_height"				"250"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"jump_height_gyroshell"	"350"
+				"jump_height_gyroshell"			"350"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"jump_horizontal_distance"	"225"
+				"jump_horizontal_distance"		"225"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -175,22 +175,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_pct"			"15"
+				"chance_pct"				"15"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"2 3 4 5"
+				"duration"				"2 3 4 5 6 7 8"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_pct"			"-35 -40 -45 -50"
+				"slow_pct"				"-5 -10 -15 -20 -25 -30 -35 "
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"debuff_delay"			"2.0"
+				"debuff_delay"				"2.4 2.0 1.6 1.2 0.8 0.4 0.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -210,6 +210,8 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"FightRecapLevel"				"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -227,7 +229,7 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"200 275 350"
+		"AbilityDamage"					"200 275 350 425 500"
 
         "precache"
 		{
@@ -252,17 +254,17 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"forward_move_speed"	"600"
+				"forward_move_speed"	"600 625 650 675 700"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT" // used after any break in the roll (start/jump/bounce)
-				"turn_rate_boosted"		"165"
+				"turn_rate_boosted"			"165 175 185 195 205"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"turn_rate"				"120"
+				"turn_rate"				"120 130 140 150 160"
 			}
 			"06"
 			{
@@ -272,17 +274,17 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hit_radius"			"150"
+				"hit_radius"				"150"
 			}			
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bounce_duration"		"0.4"
+				"bounce_duration"			"0.4"
 			}			
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.0 1.25 1.5"
+				"stun_duration"				"0.75 1.0 1.25 1.5 1.75"
 			}			
 			"10"
 			{
