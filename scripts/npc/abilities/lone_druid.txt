@@ -24,7 +24,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 75 75 75"
+		"AbilityManaCost"				"75 75 75 75 75 75 75"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bear_hp"					"1500 2000 2500 3000"
+				"bear_hp"					"2000 2500 3000 3500 4000 4500 5000"
 			}
 			"02"
 			{
@@ -43,23 +43,23 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"bear_bat"					"1.75 1.65 1.55 1.45"
+				"bear_bat"					"1.75 1.65 1.55 1.45 1.35 1.25 1.15"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bear_armor"				"3 4 5 6"
+				"bear_armor"				"4 5 6 7 8 9 10"
 				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_2"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"backlash_damage"			"10.0"
+				"backlash_damage"			"25.0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"120.0"
+				"cooldown_scepter"			"90.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -88,7 +88,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 50 50 50"
+		"AbilityManaCost"				"80 80 80 80 80 80 80"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -97,13 +97,13 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_attack_speed"		"20 30 40 50"		
+				"bonus_attack_speed"		"20 30 40 50 60 70 80"		
 				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_6"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_move_speed"	"10 15 20 25"
+				"bonus_move_speed"	"5 10 15 20 25 30 35"
 			}
 			"03"
 			{
@@ -134,7 +134,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"38 32 26 20"
+		"AbilityCooldown"				"42 38 32 26 20 16 12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -152,12 +152,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_speed"			"20"
+				"bonus_speed"				"20"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.2 1.6 2.0 2.4"
+				"duration"				"1.2 1.4 1.6 1.8 2.0 2.2 2.4"
 			}
 		}
 	}
@@ -180,7 +180,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"38 32 26 20"
+		"AbilityCooldown"				"42 38 32 26 20 16 12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -203,7 +203,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.2 1.6 2.0 2.4"
+				"duration"				"1.2 1.4 1.6 1.8 2.0 2.2 2.4"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -220,6 +220,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_LoneDruid.TrueForm.Cast"
 
 		// Time		
@@ -242,27 +244,27 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"base_attack_time"			"1.5 1.5 1.5"
+				"base_attack_time"			"1.5 1.4 1.3 1.2 1.1"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"4 6 8"
+				"bonus_armor"				"4 6 8 10 12"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_hp"					"300 600 900"
+				"bonus_hp"					"300 600 900 1200 1500"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed_loss"				"45"
+				"speed_loss"				"45 40 35 30 25"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"transformation_time"		"1.933"
+				"transformation_time"			"1.933"
 			}
 		}
 	}
@@ -314,13 +316,13 @@
 		"ID"					"5417"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_TYPE_ULTIMATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"MaxLevel"						"3"
+		"MaxLevel"						"5"
 		"AbilitySound"					"Hero_LoneDruid.BattleCry"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.5 0.5 0.5"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -337,12 +339,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"70 100 130"		
+				"bonus_damage"		"80 120 160 200 240"		
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_armor"		"10 15 20"
+				"bonus_armor"		"10 15 20 25 30"
 			}
 			"03"
 			{
@@ -409,7 +411,7 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"60"
+		"AbilityDamage"					"120"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -422,18 +424,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"entangle_chance"		"20"
+				"entangle_chance"		"25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hero_duration"			"3.0"
+				"hero_duration"			"2.0"
 //				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"creep_duration"		"9.0"
+				"creep_duration"		"2.0"
 //				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_3"
 			}
 		}
@@ -457,7 +459,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resistance"		"33"
+				"spell_resistance"		"50"
 			}
 			"02"
 			{
