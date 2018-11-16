@@ -40,23 +40,23 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_speed"		"600 650 700 750"
+				"movement_speed"		"600 700 800 900 1000 1100 1200"
 				"LinkedSpecialBonus"	"special_bonus_unique_spirit_breaker_2"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.2 1.6 2.0 2.4"
+				"stun_duration"			"1.2 1.4 1.6 1.8 2.0 2.2 2.4"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_radius"			"300 300 300 300"
+				"bash_radius"			"300 300 300 300 300 300 300"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"vision_radius"			"400 400 400 400"
+				"vision_radius"			"400 400 400 400 400 400 400"
 			}
 			"05"
 			{
@@ -91,12 +91,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed_pct_self"	"8 12 16 20"
+				"bonus_movespeed_pct_self"	"8 12 16 20 24 28 32"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed_pct_allies"	"4 6 8 10"
+				"bonus_movespeed_pct_allies"	"4 5 6 7 8 9 10"
 			}
 			"03"
 			{
@@ -106,7 +106,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed_pct_extra"		"3 4 5 6"
+				"bonus_movespeed_pct_extra"		"4 5 6 7 8 9 10"
 			}
 			"05s"
 			{
@@ -133,7 +133,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.5 1.5 1.5 1.5"
+		"AbilityCooldown"				"2.25"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage"				"12 24 36 48"
+				"damage"				"12 24 36 48 60 72 84"
 				"LinkedSpecialBonus"	"special_bonus_unique_spirit_breaker_3"
 			}
 			"03"
@@ -163,17 +163,17 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"knockback_duration"	"0.5 0.5 0.5 0.5"
+				"knockback_duration"		"0.3 0.4 0.5 0.6 0.7 0.8 0.9"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"knockback_distance"	"143 152 158 162"
+				"knockback_distance"		"143 152 158 162 166 170 174"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"knockback_height"		"50 50 50 50"
+				"knockback_height"		"50 75 100 125 150 175 200"
 			}
 			"07"
 			{
@@ -183,7 +183,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"movespeed_duration"	"3.0 3.0 3.0 3.0"
+				"movespeed_duration"			"3.0 3.0 3.0 3.0 3.0 3.0 3.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -205,6 +205,8 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"HasScepterUpgrade"			"1"
 		"AbilitySound"					"Hero_Spirit_Breaker.NetherStrike.Begin"
 
@@ -217,11 +219,11 @@
 
 		// Time			
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"100 80 60"
+		"AbilityCooldown"				"120 100 80 60 40"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 150 175"
+		"AbilityManaCost"				"125 150 175 200 225"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -230,7 +232,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"150 200 250"
+				"damage"				"150 200 250 300 350"
 			}
 			"02"
 			{
@@ -250,7 +252,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_radius_scepter"	"250 250 250"
+				"bash_radius_scepter"	"250 275 300 325 350"
 			}
 			"06"
 			{
