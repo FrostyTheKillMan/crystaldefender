@@ -36,25 +36,25 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"self_damage"			"75 100 125 150"
+				"self_damage"			"75 150 225 300 375 450 525"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"target_damage"			"100 150 200 250"
+				"target_damage"			"100 175 250 325 400 475 550"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_amount"					"100 150 200 250"
+				"heal_amount"			"150 225 300 375 450 525 600"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"missile_speed"			"1600"
+				"missile_speed"			"800 1000 1200 1400 1600 1800 2000"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -84,11 +84,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0 10.0 8.0 6.0"
+		"AbilityCooldown"				"16.0 14.0 12.0 10.0 8.0 6.0 4.0"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"115"
+		"AbilityManaCost"				"160"
 
 		
 		// Special
@@ -98,12 +98,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15.0"
+				"duration"				"12.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage_absorb"			"110 140 170 200"
+				"damage_absorb"			"140 170 200 230 260 290 320"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon"
 			}
 			"03"
@@ -135,34 +135,34 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"debuff_duration"				"2.5"
+				"debuff_duration"				"1.5"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"buff_duration"					"4.5"
+				"buff_duration"					"2.5"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"slow_pct"						"8 12 16 20"
+				"slow_pct"						"8 10 12 14 16 18 20"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_3"
 			}
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"attack_slow_tooltip"			"8 12 16 20"
+				"attack_slow_tooltip"					"8 10 12 14 16 18 20"
 				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_3"
 			}
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"move_speed_pct"				"15"
+				"move_speed_pct"				"8 10 12 14 16 18 20"
 			}
 			"06"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"attack_speed"					"10 20 30 40"
+				"attack_speed"					"16 20 24 28 32 36 40"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -180,6 +180,8 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
@@ -187,7 +189,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60.0 50.0 40.0"
+		"AbilityCooldown"				"70.0 60.0 50.0 40.0 30.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -205,22 +207,22 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"4.0 5.0 6.0"
+				"duration"					"4.0 4.75 5.5 6.25 7.0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_scepter"			"5.0 6.0 7.0"
+				"duration_scepter"				"5.5 6.0 6.5 7.0 7.5"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"redirect"					"0.5"
+				"redirect"					"0.20 0.40 0.60 0.80 1.00"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"redirect_pct_tooltip_scepter"					"50"
+				"redirect_pct_tooltip_scepter"			"20 40 60 80 100"
 			}
 			"06"
 			{
