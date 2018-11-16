@@ -205,6 +205,9 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
+
 		"AbilitySound"					"hero_bloodseeker.rupture"
 
 		"HasScepterUpgrade"			"1"
