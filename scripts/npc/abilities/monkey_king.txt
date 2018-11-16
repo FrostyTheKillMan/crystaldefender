@@ -34,12 +34,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"0.4 0.8 1.2 1.6"
+				"stun_duration"				"0.4 0.5 0.6 0.7 0.8 0.9"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"strike_crit_mult"			"150 175 200 225"
+				"strike_crit_mult"			"180 190 200 210 220 230 240"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king"
 			}
 			"03"
@@ -89,7 +89,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movespeed"					"200"
+				"movespeed"					"600"
 			}
 			"02"
 			{
@@ -178,19 +178,19 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"ground_jump_distance"		"1000"
+				"ground_jump_distance"		"1000 1200 1400 1600 1800 2000 2200"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_7"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"perched_jump_distance"		"1000"
+				"perched_jump_distance"		"1000 1200 1400 1600 1800 2000 2200"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_7"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"jump_damage_cooldown"		"3.0"
+				"jump_damage_cooldown"		"3.0 2.5 2.0 1.5 1.0 0.5 0.0"
 			}
 			"07"
 			{
@@ -220,13 +220,13 @@
 			"12"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"impact_damage_tooltip"		"140 210 280 350"
+				"impact_damage_tooltip"		"140 210 280 350 420 490 560"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_3"
 			}
 			"13"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"impact_movement_slow_tooltip"	"20 40 60 80"
+				"impact_movement_slow_tooltip"	"20 30 40 50 60 70 80"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -243,7 +243,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
+
 		"AbilitySound"					"Hero_MonkeyKing.Spring.Channel"
 
 		// Casting
@@ -253,7 +253,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"19 17 15 13"
+		"AbilityCooldown"				"19 17 15 13 11 9 7"
 		"AbilityChannelTime"			"1.7"
 
 		// Cost
@@ -267,28 +267,28 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impact_damage"			"140 210 280 350"
+				"impact_damage"			"140 210 280 350 420 490 560"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impact_movement_slow"	"20 40 60 80"
+				"impact_movement_slow"	"20 30 40 50 60 70 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"impact_slow_duration"	"4.0"
+				"impact_slow_duration"	"2.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_distance"			"1000"
+				"max_distance"			"1000 1200 1400 1600 1800 2000 2200"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impact_radius"			"375"
+				"impact_radius"			"375 400 425 450 475 500 525"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -323,6 +323,8 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+        	"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_MonkeyKing.FurArmy"
 
 		// Casting
@@ -333,7 +335,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"130 110 90"
+		"AbilityCooldown"				"130 110 90 70 50"
 		"AbilityDuration"				"13.0"
 
 		// Cost
@@ -357,12 +359,12 @@
 			"03"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"num_first_soldiers"				"5"
+				"num_first_soldiers"				"5 6 7 8 9"
 			}
 			"04"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"num_second_soldiers"				"9"
+				"num_second_soldiers"				"9 10 11 12 13"
 			}
 			"05"
 			{
@@ -372,7 +374,7 @@
 			"06"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"bonus_armor"						"12 18 24"
+				"bonus_armor"						"18 24 30 36 42"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_4"
 			}
 			"07"
@@ -438,18 +440,18 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"charges"					"4"
+				"charges"					"3 4 5 6 7 8 9"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"60 90 120 150"
+				"bonus_damage"				"60 90 120 150 180 210 240"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_2"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lifesteal"					"15 30 45 60"
+				"lifesteal"					"15 30 45 60 75 90 105"
 			}
 			"06"
 			{
