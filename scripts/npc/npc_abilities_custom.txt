@@ -1,5 +1,8 @@
 // Dota Heroes File
+//Custom
 #base "abilities/custom/huskar_custom.txt"
+#base "abilities/custom/ogre_magi_custom.txt"
+
 "DOTAAbilities"
 {
 	"Version"		"1"
