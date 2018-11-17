@@ -4,14 +4,14 @@
 "DOTAHeroes"
 {
 	//=================================================================================================================
-	// HERO: Underlord
+	// HERO: Abyssal Underlord
 	//=================================================================================================================
 	"npc_dota_hero_abyssal_underlord"
 	{
 		"overrider_hero"		"npc_dota_hero_abyssal_underlord"
 		
-		"Ability3"				"abyssal_underlord_expulsion_crystal"
-		"Ability4"				"abyssal_underlord_rifts_edge_crystal"
+		"Ability3"				"abyssal_underlord_expulsion"
+		"Ability4"				"abyssal_underlord_rifts_edge"
 		"Ability5"				"abyssal_underlord_atrophy_aura"
 		
 	}
@@ -20,11 +20,21 @@
 	//=================================================================================================================
 	"npc_dota_hero_faceless_void"
 	{
-		"overrider_hero"		"npc_dota_hero_abyssal_underlord"
+		"overrider_hero"		"npc_dota_hero_faceless_void"
 		
-		"Ability4"				"faceless_void_time_breaker_crystal"
+		"Ability4"				"faceless_void_time_breaker"
 
 		
+	}
+	//=================================================================================================================
+	// HERO: Huskar
+	//=================================================================================================================
+	"npc_dota_hero_huskar"
+	{
+		"overrider_hero"		"npc_dota_hero_huskar"
+		
+		"Ability3"				"huskar_berserk"
+		"Ability4"				"huskar_berserkers_blood"
 	}
 	//=================================================================================================================
 	// HERO: Winter Wyvern
