@@ -25,7 +25,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10.0 9.0 8.0 7.0"
+		"AbilityCooldown"				"10.0 9.0 8.0 7.0 6.0 5.0 4.0"
 		"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875 0.6875"
 
 
@@ -279,12 +279,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"polarity_damage"		"125 200 275 350 425"
+				"polarity_damage"		"275 400 525 650 775"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hero_stun_duration"		"1.25"
+				"hero_stun_duration"		"1.25 2.0 2.75 3.5 4.25"
 				"LinkedSpecialBonus"	"special_bonus_unique_magnus_5"
 			}
 			"04"
