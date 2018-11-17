@@ -198,7 +198,7 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"HasScepterUpgrade"			"1"
 		"LevelsBetweenUpgrades"         "6"
-        	"MaxLevel"                      "5"
+        	"MaxLevel"                      "3"
 		"AbilitySound"					"Hero_Visage.SummonFamiliars.Cast"
 
 		// Casting
