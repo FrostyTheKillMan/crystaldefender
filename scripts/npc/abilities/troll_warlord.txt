@@ -37,7 +37,7 @@
 			"04"
 			{	
 				"var_type"				"FIELD_INTEGER"
-				"bonus_range"			"350 375 400 425 450 475 500"
+				"bonus_range"			"350"
 			}
 			"05"
 			{
