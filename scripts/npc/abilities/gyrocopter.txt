@@ -21,8 +21,8 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"7.0 6.5 6 5.5"
-		"AbilityDuration"				"3 3 3 3"
+		"AbilityCooldown"				"7.0 6.5 6 5.5 5.0 4.5 4.0"
+		"AbilityDuration"				"3 3 3 3 3 3 3"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,17 +35,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"400"
+				"radius"					"400 425 450 475 500 525 550"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"rockets_per_second"		"10"
+				"rockets_per_second"		"10 11 12 13 14 15 16"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"rocket_damage"				"7 12 17 22"
+				"rocket_damage"				"12 15 18 21 24 27 30"
 				"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_3"
 			}
 		}
@@ -75,15 +75,15 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"26 21 16 11"
+		"AbilityCooldown"				"41 36 31 26 21 16 11"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120 130 140 150"
+		"AbilityManaCost"				"180"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"100 175 250 325"
+		"AbilityDamage"					"225 350 425 550 675 800 925"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -102,13 +102,13 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"2.25 2.5 2.75 3.0"
+				"stun_duration"				"1.5 1.75 2.0 2.25 2.5 2.75 3.0"
 				"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_6"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_speed_bonus_pct"	"400 400 400 400"
+				"attack_speed_bonus_pct"	"400 400 400 400 400 400"
 			}
 			"05"
 			{
@@ -148,7 +148,7 @@
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"charge_restore_time"	"26 21 16 11"
+				"charge_restore_time"	"41 36 31 26 21 16 11"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -173,7 +173,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"40 35 30 25 20 15 10"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -181,7 +181,7 @@
 
 		//Duration
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"				"15 15 15 15"
+		"AbilityDuration"				"15 15 15 15 15 15 15"
 						
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -195,7 +195,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"max_attacks"					"3 4 5 6"
+				"max_attacks"					"3 4 5 6 7 8 9"
 				"LinkedSpecialBonus"			"special_bonus_unique_gyrocopter_2"
 			}
 			"03"
@@ -231,6 +231,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"2"
+		"LevelsBetweenUpgrades"         "6"
+       		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_Gyrocopter.CallDown.Fire"
 
 		"HasScepterUpgrade"			"1"
@@ -243,11 +245,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"55 50 45"
+		"AbilityCooldown"				"60 55 50 45 40"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 125 125"
+		"AbilityManaCost"				"125 150 175 200 225"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -266,12 +268,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_first"				"150 250 350"
+				"damage_first"				"250 350 450 550 650"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_second"				"100 150 200"
+				"damage_second"				"125 200 275 350 425"
 			}
 			"05"
 			{
@@ -296,7 +298,7 @@
 			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_second_scepter"		"175 225 275"
+				"damage_second_scepter"			"150 225 300 375 450"
 			}
 		}
 	}
