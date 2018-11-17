@@ -106,6 +106,7 @@
 #base "abilities/vengefulspirit.txt"
 #base "abilities/venomancer.txt"
 #base "abilities/viper.txt"
+#base "abilities/visage.txt"
 #base "abilities/warlock.txt"
 #base "abilities/weaver.txt"
 #base "abilities/windrunner.txt"
