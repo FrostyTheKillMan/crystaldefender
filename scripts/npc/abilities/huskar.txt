@@ -70,7 +70,55 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}	
+	//=================================================================================================================
+	// Huskar: Inner Fire
+	//=================================================================================================================
+	"huskar_inner_fire"
+	{
+		{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5271"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"					   
+		"AbilitySound"					"Hero_Huskar.Inner_Vitality"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 16 14 12 10 8 6"
+		"AbilityDuration"				"0.5 0.75 1.0 1.25 1.5 1.75 2.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 100 125 150 175 200 225"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// already gets credit for the healing
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"105 150 195 240 285 330 375"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
 	
+	
+	}
 	//=================================================================================================================
 	// Huskar: Burning Spear
 	//=================================================================================================================
