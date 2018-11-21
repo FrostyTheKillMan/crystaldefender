@@ -105,12 +105,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"0.25"
+				"duration"				"0.10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_creep"		"0.25"
+				"duration_creep"		"0.10"
 			}
 			"03"
 			{
@@ -120,7 +120,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"50 75 100 125 150 175 200"
+				"bonus_damage"			"25 50 75 100 125 150 175"
 				"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_3"
 			}
 		}
