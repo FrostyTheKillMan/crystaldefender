@@ -111,10 +111,10 @@
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"105 150 195 240 285 330 375"
 			}
-			"01"
+			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"0.5 0.75 1.0 1.25 1.5 1.75 2.0"
+				"disarm_duration"			"0.5 0.75 1.0 1.25 1.5 1.75 2.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
