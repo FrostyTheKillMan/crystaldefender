@@ -35,10 +35,10 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 85 95 105"
+		"AbilityManaCost"				"75 85 95 105 115 125 135"
 		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"55 110 165 220"
+		"AbilityDamage"					"60 100 140 180 220 260 300"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -453,7 +453,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"				"ability_datadriven"
+		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -484,7 +484,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"95 105 115 125"
+		"AbilityManaCost"				"95 105 115 125 135 145 155"
 				
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -493,19 +493,19 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"5 6 7 8"
+				"duration"			"4 5 6 7 8 9 10"
 			}
 
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"burn_damage"		"26 34 42 50"
+				"burn_damage"		"24 32 40 48 56 64 72"
 			}		
 
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"slow_movement_speed_pct"		"-20 -22 -24 -26"
+				"slow_movement_speed_pct"		"-14 -16 -18 -20 -22 -24 -26"
 			}
 
 			"04"
@@ -531,14 +531,14 @@
 			//Based on Multicast Level
 			"08"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"multicast_cast_range_bonus"		"150 300 450"
+				"var_type"							"FIELD_INTEGER"
+				"multicast_cast_range_bonus"		"150 200 250 300 350 400 450"
 			}
 			//Based on Multicast Level
 			"09"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"ignite_aoe"		"150 300 450"
+				"ignite_aoe"		"150 200 250 300 350 400 450"
 			}
 			"10"
 			{
@@ -551,7 +551,7 @@
 		{		
 			"RunScript"
 			{
-				"ScriptFile"	"ignite.lua"
+				"ScriptFile"	"abilities/ogre_magi/ignite.lua"
 				"Function"		"CheckDistance"
 			}
 		}
@@ -566,7 +566,7 @@
 			
 			"RunScript"
 			{
-				"ScriptFile"	"ignite.lua"
+				"ScriptFile"	"abilities/ogre_magi/ignite.lua"
 				"Function"		"AOEEffect"
 			}
 		}
@@ -654,7 +654,7 @@
 						{
 							"RunScript"
 							{
-								"ScriptFile"	"ignite.lua"
+								"ScriptFile"	"abilities/ogre_magi/ignite.lua"
 								"Function"		"CheckTargets"
 							}
 						}
@@ -741,13 +741,13 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"10 12 14 16"
+				"bonus_movement_speed"		"10 12 14 16 18 20 22"
 			}
 
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"20 30 40 50"
+				"bonus_attack_speed"	"20 30 40 50 60 70 80"
 			}
 			"05"
 			{
@@ -839,7 +839,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"heroes/hero_ogre_magi/bloodlust.lua"
+						"ScriptFile"	"abilities/ogre_magi/bloodlust.lua"
 						"Function"		"RevertModel"
 					}
 				}
