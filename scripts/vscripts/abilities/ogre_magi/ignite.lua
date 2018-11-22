@@ -28,9 +28,7 @@ function CheckTargets(keys)
 	end
 end
 
---[[Author: YOLOSPAGHETTI
-	Date: February 14, 2016
-	Checks whether the target is in cast range (the cast range in datadriven is set to its maximum range)]]
+--Checks whether the target is in cast range (the cast range in datadriven is set to its maximum range)]]
 function CheckDistance(keys)
 	local caster = keys.caster
 	local ability = keys.ability
@@ -91,9 +89,7 @@ function CheckDistance(keys)
 	ability.last_angle = caster:GetAnglesAsVector().y
 end
 
---[[Author: YOLOSPAGHETTI
-	Date: February 14, 2016
-	Applies an aoe effect on the target, if multicast is leveled]]
+--Applies an aoe effect on the target, if multicast is leveled]]
 function AOEEffect(keys)
 	local caster = keys.caster
 	local target = keys.target
