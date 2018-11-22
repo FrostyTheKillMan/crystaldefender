@@ -73,7 +73,7 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_illusion_damage"	"20"
+				"tooltip_illusion_damage"	"200"
 			}
 			"08"
 			{
@@ -230,12 +230,12 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"illusion_damage_out_pct"	"-54"
+				"illusion_damage_out_pct"	"-50"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_illusion_damage"	"16"
+				"tooltip_illusion_damage"	"300"
 			}
 			"07"
 			{
