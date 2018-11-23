@@ -23,7 +23,7 @@ MINIMAP_RUNE_ICON_SIZE = 1              -- What icon size should we use for rune
 RUNE_SPAWN_TIME = 120                    -- How long in seconds should we wait between rune spawns?
 CUSTOM_BUYBACK_COST_ENABLED = true      -- Should we use a custom buyback cost setting?
 CUSTOM_BUYBACK_COOLDOWN_ENABLED = true  -- Should we use a custom buyback time?
-BUYBACK_ENABLED = false                 -- Should we allow people to buyback when they die?
+BUYBACK_ENABLED = true                  -- Should we allow people to buyback when they die?
 
 DISABLE_FOG_OF_WAR_ENTIRELY = true      -- Should we disable fog of war entirely for both teams?
 USE_STANDARD_HERO_GOLD_BOUNTY = true    -- Should we give gold for hero kills the same as in Dota, or allow those values to be changed?
@@ -43,10 +43,12 @@ USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom
 MAX_LEVEL = 50                          -- What level should we let heroes get to?
 USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
+MAXIMUM_ATTACK_SPEED = 1000              -- What should we use for the maximum attack speed?
+MINIMUM_ATTACK_SPEED = 10 
 -- Fill this table up with the required XP per level if you want to change it
 XP_PER_LEVEL_TABLE = {}
 for i=1,MAX_LEVEL do
-	XP_PER_LEVEL_TABLE[i] = i * 200
+	XP_PER_LEVEL_TABLE[i] = i * 575
 end
 
 -- Generated from template
@@ -70,6 +72,8 @@ function GameMode:InitGameMode()
 	GameRules:SetHeroMinimapIconScale( MINIMAP_ICON_SIZE )
 	GameRules:SetCreepMinimapIconScale( MINIMAP_CREEP_ICON_SIZE )
 	GameRules:SetRuneMinimapIconScale( MINIMAP_RUNE_ICON_SIZE )
+	GameRules:SetMaximumAttackSpeed( MAXIMUM_ATTACK_SPEED )
+	GameRules:SetMinimumAttackSpeed( MINIMUM_ATTACK_SPEED )
 	print('[BAREBONES] GameRules set')
 
 	-- Listeners - Event Hooks
@@ -258,7 +262,6 @@ function GameMode:OnHeroInGame(hero)
 	table.insert(self.vPlayers, hero)
 
 	-- This line for example will set the starting gold of every hero to 500 unreliable gold
-	hero:SetGold(500, false)
 
 	-- These lines will create an item and add it to the player, effectively ensuring they start with the item
 	local item = CreateItem("item_example_item", hero, hero)

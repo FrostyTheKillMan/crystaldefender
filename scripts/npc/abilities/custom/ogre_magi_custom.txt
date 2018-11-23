@@ -37,8 +37,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"75 85 95 105 115 125 135"
 		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"60 100 140 180 220 260 300"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -85,6 +83,12 @@
 				"var_type"			"FIELD_FLOAT"
 				"multicast_delay8"	"2.8"
 			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fireblast_damage"		"60 100 140 180 220 260 300"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_2"
+			}
 		}
 		
 		"OnSpellStart"
@@ -112,7 +116,7 @@
 			{
 				"Target"  "TARGET"
 				"Type"    "DAMAGE_TYPE_MAGICAL"
-				"Damage"  "%AbilityDamage"
+				"Damage"  "%fireblast_damage"
 			}
 		}
 		
@@ -166,7 +170,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -209,7 +213,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -252,7 +256,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -295,7 +299,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -338,7 +342,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -381,7 +385,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -423,7 +427,7 @@
 							{
 								"Target"  "TARGET"
 								"Type"    "DAMAGE_TYPE_MAGICAL"
-								"Damage"  "%AbilityDamage"
+								"Damage"  "%fireblast_damage"
 							}
 					
 							"FireEffect"
@@ -748,6 +752,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"20 30 40 50 60 70 80"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
 			}
 			"05"
 			{
@@ -852,6 +857,351 @@
 			}
 		}
 	}
+	"ogre_magi_lightning_shield"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"ogre_magi_lightning_shield"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"Precache"
+		{
+			"partical"				"particles/items2_fx/mjollnir_shield.vpcf"
+			"partical"				"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+			"soundfile"				"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+		}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius_damage"		"4 6 8 10 12 14 16"
+			}
+			
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"150"
+			}
+			
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval"			"0.1"
+			}
+
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lightning_damage"	"50"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lightning_radius"	"600"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval_multicast_1"	"2.4"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval_multicast_2"	"2.0"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval_multicast_3"	"1.6"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval_multicast_4"	"1.2"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval_multicast_5"	"0.8"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"20.0"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_lightning_shield"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%interval"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Radius"	"%radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Type"			"DAMAGE_TYPE_MAGICAL"
+						"Damage"		"%radius_damage"
+					}
+				}
+				
+				"EffectName"			"particles/items2_fx/mjollnir_shield.vpcf"
+				"EffectAttachType"		"follow_origin"
+			}
+			
+			"modifier_lightning_shield_multicast_1"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%lightning_interval_multicast_1"
+				
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"		"TARGET"
+							"Radius"		"%lightning_radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Action"
+						{
+							"FireSound"
+							{
+								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"Target"			"TARGET"
+							}
+							"TrackingProjectile"
+							{
+								"Target"			"TARGET"
+								"EffectName"		"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+								"Dodgeable"       	"0"
+								"ProvidesVision"   	"1"
+								"VisionRadius"     	"0"
+								"MoveSpeed"        	"1800"
+								"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+							}
+						}
+					}
+				}
+			}
+			
+			"modifier_lightning_shield_multicast_2"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%lightning_interval_multicast_2"
+				
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"		"TARGET"
+							"Radius"		"%lightning_radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Action"
+						{
+							"FireSound"
+							{
+								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"Target"			"TARGET"
+							}
+							"TrackingProjectile"
+							{
+								"Target"			"TARGET"
+								"EffectName"		"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+								"Dodgeable"       	"0"
+								"ProvidesVision"   	"1"
+								"VisionRadius"     	"0"
+								"MoveSpeed"        	"1800"
+								"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+							}
+						}
+					}
+				}
+			}
+			
+			"modifier_lightning_shield_multicast_3"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%lightning_interval_multicast_3"
+				
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"		"TARGET"
+							"Radius"		"%lightning_radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Action"
+						{
+							"FireSound"
+							{
+								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"Target"			"TARGET"
+							}
+							"TrackingProjectile"
+							{
+								"Target"			"TARGET"
+								"EffectName"		"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+								"Dodgeable"       	"0"
+								"ProvidesVision"   	"1"
+								"VisionRadius"     	"0"
+								"MoveSpeed"        	"1800"
+								"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+							}
+						}
+					}
+				}
+			}
+			
+			"modifier_lightning_shield_multicast_4"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%lightning_interval_multicast_4"
+				
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"		"TARGET"
+							"Radius"		"%lightning_radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Action"
+						{
+							"FireSound"
+							{
+								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"Target"			"TARGET"
+							}
+							"TrackingProjectile"
+							{
+								"Target"			"TARGET"
+								"EffectName"		"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+								"Dodgeable"       	"0"
+								"ProvidesVision"   	"1"
+								"VisionRadius"     	"0"
+								"MoveSpeed"        	"1800"
+								"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+							}
+						}
+					}
+				}
+			}
+			
+			"modifier_lightning_shield_multicast_5"
+			{
+				"Duration"				"%duration"
+				"ThinkInterval"			"%lightning_interval_multicast_5"
+				
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"		"TARGET"
+							"Radius"		"%lightning_radius"
+							
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+						}
+						"Action"
+						{
+							"FireSound"
+							{
+								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"Target"			"TARGET"
+							}
+							"TrackingProjectile"
+							{
+								"Target"			"TARGET"
+								"EffectName"		"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
+								"Dodgeable"       	"0"
+								"ProvidesVision"   	"1"
+								"VisionRadius"     	"0"
+								"MoveSpeed"        	"1800"
+								"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+							}
+						}
+					}
+				}
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"		"TARGET"
+				"ScriptFile"	"abilities/ogre_magi/lightning_shield.lua"
+				"Function"		"LightningShield"
+			}
+		}
+		
+		"OnProjectileHitUnit" 
+		{
+			"DeleteOnHit" "1"
+			"Damage"
+			{
+				"Target"	"TARGET"
+				"Type"		"DAMAGE_TYPE_MAGICAL"
+				"Damage"	"%lightning_damage"
+			
+			}
+		
+		}
+	}
+
+	
 	"ogre_magi_unrefined_fireblast_datadriven"
 	{
 		// General
@@ -904,6 +1254,7 @@
 				"scepter_mana"		"0.6"
 			}
 		}
+		
 	}
 	"ogre_magi_multicast_datadriven"
 	{
@@ -913,6 +1264,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityTextureName"			"ogre_magi_multicast"
+		"MaxLevel"						"5"
+		"LevelsBetweenUpgrades"         "6"
 
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -930,51 +1283,59 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_2_times"		"100 0 0 0 0"
+				"var_type"			"FIELD_INTEGER"
+				"fireblast_mana_cost"	"20 40 60 80 100"
 			}
 
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_3_times"		"0 100 50 0 0"
-			}
-
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_4_times"		"0 0 50 100 0"
+				"var_type"			"FIELD_FLOAT"
+				"fireblast_cooldown"	"2 4 6 8 10"
 			}
 			
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_8_times"		"0 0 0 0 100"
+				"ignite_range"			"85 100 115 130 145"
 			}
-
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"fireblast_mana_cost"	"20 40 60 80 100"
-			}
-
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"fireblast_cooldown"	"2 4 6 8 10"
-			}
-
-			"07"
+			
+			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"bloodlust_cooldown"	"5 10 15 20 25"
 			}
 			
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"lightning_interval"	"2.4 2.0 1.6 1.2 0.8"
+			}
+
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_2_times"		" 60.0 60.0 60.0 50.0 40.0"
+			}
+
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_3_times"		"0.0 30.0 30.0 30.0 30.0"
+			}
+
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"ignite_range"			"85 100 115 130 145"
+				"multicast_4_times"		"0.0 0.0 15.0 15.0 20.0"
 			}
+			
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_8_times"		"0 0 0 10.0 15.0"
+			}
+
+
 		}
 		
 		"Modifiers"
