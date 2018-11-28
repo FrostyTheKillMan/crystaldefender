@@ -21,7 +21,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70 80 90 100"
+		"AbilityManaCost"				"70 80 90 100 110 120 130"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,29 +35,29 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage"			"-75 -70 -65 -60"
+				"outgoing_damage"			"-75 -70 -65 -60 -55 -50 -45"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_4"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage_tooltip"	"25 30 35 40"
+				"outgoing_damage_tooltip"	"25 30 35 40 45 50 55"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_4"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"incoming_damage"			"450 400 350 300"
+				"incoming_damage"			"450 400 350 300 250 200 150"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_incoming_damage_total_pct"			"550 500 450 400"
+				"tooltip_incoming_damage_total_pct"			"550 500 450 400 350 300 250"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"images_count"				"3 3 3 3"
+				"images_count"				"3 3 3 3 4 5 6"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren"
 			}
 			"07"
@@ -96,7 +96,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70 80 90 100"
+		"AbilityManaCost"				"70 80 90 100 110 120 130"
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
@@ -109,7 +109,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"2.0 3.0 4.0 5.0"
+				"duration"					"2.0 3.0 4.0 5.0 6.0 7.0 8.0"
 			}
 			"02"
 			{
@@ -142,7 +142,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0 0 0 0"
+		"AbilityCastPoint"				"0 0 0 0 0 0 0"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -150,11 +150,11 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 90 100 110"
+		"AbilityManaCost"				"0"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"80 130 180 230"
+		"AbilityDamage"					"80 130 180 230 280 330"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -163,7 +163,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"armor_reduction"			"-2 -3 -4 -5"
+				"armor_reduction"			"-2 -3 -4 -5 -6 -7 -8"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_3"
 			}
 			"02"
@@ -194,21 +194,23 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"HasScepterUpgrade"			"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_NagaSiren.SongOfTheSiren"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"1.0"
-		"AbilityCastRange"				"1000 1200 1400"
+		"AbilityCastRange"				"1000 1200 1400 1600 1800"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"160.0 120.0 80.0"
+		"AbilityCooldown"				"280.0 240.0 200.0 160.0 80.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150 175 200"
+		"AbilityManaCost"				"150 175 200 225 250"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -217,32 +219,32 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"1000 1200 1400"
+				"radius"					"1000 1200 1400 1600 1800"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"7.0 7.0 7.0"
+				"duration"					"7.0 7.0 7.0 7.0 7.0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"animation_rate"				"0.55 0.55 0.55"
+				"animation_rate"				"0.55 0.55 0.55 0.55 0.55"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"regen_rate"				"10.0"
+				"regen_rate"				"10.0 10.0 10.0 15.0 20.0"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"regen_rate_self"				"10.0"
+				"regen_rate_self"				"10.0 10.0 10.0 15.0 25.0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"regen_rate_tooltip_scepter"				"10"
+				"regen_rate_tooltip_scepter"				"10.0 10.0 10.0 15.0 20.0"
 			}
 		}
 	}
@@ -261,11 +263,11 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0 0 0"
+		"AbilityCastPoint"				"0 0 0 0 0"
  		"AbilityCastAnimation"			"ACT_INVALID"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.0 1.0 1.0"
+		"AbilityCooldown"				"1.0 1.0 1.0 1.0 1.0"
 	}
 }
