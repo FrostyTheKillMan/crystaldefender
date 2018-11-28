@@ -20,20 +20,20 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"650"
-		"AbilityCastPoint"				"0.7 0.7 0.7 0.7"
+		"AbilityCastPoint"				"0.7 0.7 0.7 0.7 0.7 0.7 0.7"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"9 9 9 9"
+		"AbilityCooldown"				"9 9 9 9 9 9 9"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 100 120 140"
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"120 180 240 300"
-		"AbilityDuration"				"2 2 2 2"
+		"AbilityDamage"					"120 180 240 300 360 420 480"
+		"AbilityDuration"				"2 2 2 2 2 2 2"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -48,7 +48,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"150 175 200 225"
+				"radius"			"150 175 200 225 250 275 300"
 			}
 			
 			"03"
@@ -83,15 +83,15 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 22 22 22"
+		"AbilityCooldown"				"22 22 22 22 22 22 22"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"95 120 135 155"
+		"AbilityManaCost"				"95 120 135 155 175 195 215"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"9 18 27 36"
+		"AbilityDamage"					"9 18 27 36 45 54 63"
 		"AbilityDuration"				"10"
 		
 		// Special
@@ -101,7 +101,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"num_explosions"		"40"
+				"num_explosions"		"40 40 40 50 60 70 100"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_1"
 			}
 			
@@ -113,7 +113,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tower_bonus"			"40"
+				"tower_bonus"			"40 40 40 40 50 50 60"
 			}
 			"04"
 			{
@@ -155,11 +155,11 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 100 120 140"
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"80 120 160 200"
+		"AbilityDamage"					"80 120 160 200 260 320 380"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -168,7 +168,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"jump_count"			"4 6 8 10"
+				"jump_count"			"4 6 8 10 12 14 28"
 			}			
 			"02"
 			{
@@ -178,7 +178,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"jump_delay"			"0.25 0.25 0.25 0.25"
+				"jump_delay"			"0.25 0.25 0.25 0.25 0.25 0.25 0.25"
 			}
 			"04"
 			{
@@ -188,7 +188,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"0.4 0.6 0.8 1.0"
+				"slow_duration"			"0.4 0.6 0.8 1.0 1.2 1.4 1.6"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_2"
 			}	
 			"06"
@@ -221,17 +221,19 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0 0 0 0"
-		"AbilityCooldown"				"1.0 1.0 1.0 1.0"
+		"AbilityCastPoint"				"0 0 0 0 0"
+		"AbilityCooldown"				"1.0 1.0 1.0 1.0 1.0 1.0"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70 90 110"
+		"AbilityManaCost"				"70 90 110 130 150"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -240,24 +242,24 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_cost_per_second"	"20 40 60"
+				"mana_cost_per_second"	"20 40 60 80 100"
 			}
 			
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"450"
+				"radius"			"450 450 450 500 650"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"100 140 180"
+				"damage"			"100 140 180 200 320"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_3"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_scepter"	"160 190 220"
+				"damage_scepter"	"160 190 220 240 360"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_3"
 			}
 		}
