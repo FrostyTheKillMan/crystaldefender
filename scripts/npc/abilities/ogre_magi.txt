@@ -84,7 +84,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"6"
+		"AbilityCooldown"				"12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -110,12 +110,12 @@
 			"03"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"scepter_mana"		"0.6"
+				"scepter_mana"		"0.4"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"fireblast_damage"		"450"
+				"fireblast_damage"		"1500"
 			}
 		}
 	}
@@ -336,13 +336,6 @@
 				"var_type"				"FIELD_FLOAT"
 				"multicast_4_times_tooltip"		"0 0 15 20 25"
 			}
-			"13"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_8_times_tooltip"		"0 0 0 0 5"
-			}
-			
-
 
 		}
 	}
