@@ -20,15 +20,15 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4 0.4"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+		"AbilityCooldown"				"10.0 10.0 10.0 10.0 10.0 10.0 10.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"140 140 140 140"
+		"AbilityManaCost"				"140 140 140 140 140 140 140"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -42,23 +42,23 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stun_min"				"1 1 1 2"
+				"stun_min"				"1 1 1 2 2 3 4"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stun_max"				"2 3 4 4"
+				"stun_max"				"2 3 4 4 5 6 7"
 				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_min"			"75 100 125 150"
+				"damage_min"			"75 100 125 150 175 200 225"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_max"			"200 225 250 275"
+				"damage_max"			"200 225 250 275 300 325 350"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -82,17 +82,17 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"550 600 650 700"
+		"AbilityCastRange"				"550 600 666 700 750 800 850"
 		"AbilityCastPoint"				"0.3"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18 14 10 6"
+		"AbilityCooldown"				"18 16 14 12 10 8 6"
 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"50 55 60 65 70 75 80"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -101,12 +101,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"cast_range"				"550 600 650 700"
+				"cast_range"				"550 600 666 700 750 800 850"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"armor_reduction"			"-1 -3 -5 -7"
+				"armor_reduction"			"-1 -3 -5 -7 -9 -11 -13"
 				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_2"
 			}		
 			"03"
@@ -137,17 +137,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_chance"				"12"
+				"crit_chance"				"50 30 20 10 8 6 1"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_damage"				"125 175 225 275"
+				"crit_damage"				"50 125 150 275 350 400 666"
 			}	
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lifesteal"					"75"
+				"lifesteal"					"10 15 55 60 75 125"
 			}		
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -171,11 +171,13 @@
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 		"AbilityCastRange"				"1200"
 		"HasScepterUpgrade"			"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"AbilitySound"					"Hero_ChaosKnight.Phantasm"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
@@ -184,7 +186,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 200 275"
+		"AbilityManaCost"				"125 200 275 350 425"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -193,7 +195,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"images_count"				"1 2 3"
+				"images_count"				"3 3 4 5 7"
 			}
 			"02"
 			{
@@ -208,12 +210,12 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage"			"0 0 0"
+				"outgoing_damage"			"0 0 0 0 0"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage_tooltip"			"100 100 100"
+				"outgoing_damage_tooltip"			"100 100 100 100 100"
 			}	
 			"06"
 			{

@@ -52,7 +52,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"0.1"
+				"bash_duration"			"0.2"
 			}
 			"09"
 			{
@@ -84,7 +84,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1000"
-		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
   		"AbilityCastAnimation"			"ACT_INVALID"
 
 		// Time		
@@ -234,7 +234,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_stacks"			"10"
+				"max_stacks"			"9 10 11 12 13 14 15"
 				"LinkedSpecialBonus"	"special_bonus_unique_troll_warlord_2"
 			}
 			"02"
@@ -263,7 +263,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0 0.0 0.0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
@@ -281,7 +281,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"trance_duration"		"5.0"		
+				"trance_duration"		"5.0 5.0 5.0 5.5 6.0"		
 			}
 			"02"
 			{
