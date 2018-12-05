@@ -35,12 +35,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"whirling_radius"			"300"
+				"whirling_radius"			"300 300 350 400 450 500 550"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"whirling_damage"			"100 150 200 250"
+				"whirling_damage"			"100 150 200 250 300 350 400"
 			}
 			"03"
 			{
@@ -50,13 +50,13 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"stat_loss_pct"				"15"
+				"stat_loss_pct"				"15 15 15 15 20 25 30"
 				"LinkedSpecialBonus"		"special_bonus_unique_timbersaw"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"14.0"
+				"duration"					"14.0 14.0 14.0 14.0 12.0 10.0 8.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -79,7 +79,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
-		"AbilityCastRange"				"850 1050 1250 1450"
+		"AbilityCastRange"				"850 1050 1250 1450 1650 1850 2050"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"60 70 80 90"
+		"AbilityManaCost"				"60 70 80 90 100 110 120"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -96,28 +96,28 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"chain_radius"		"90 90 90 90"
+				"chain_radius"		"90 90 90 90 90 90 90"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"range"				"850 1050 1250 1450"
+				"range"				"850 1050 1250 1450 1650 1850 2050"
 				"LinkedSpecialBonus"	"special_bonus_unique_timbersaw_3"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"		"225 225 225 225"
+				"radius"		"225 225 225 225 250 275 300"
 			}
 			"04"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"speed"				"1600 2000 2400 2800"
+				"speed"				"1600 2000 2400 2800 3000 3200 3400"
 			}
 			"05"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"100 140 180 220"
+				"damage"			"100 140 180 220 260 300 340"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -142,23 +142,23 @@
 			"01"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"bonus_armor"						"1.3 1.4 1.5 1.6"
+				"bonus_armor"						"1.3 1.4 1.5 1.6 1.7 1.8 2.0"
 			}
 			"02"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"bonus_hp_regen"							"1 1.15 1.3 1.45"
+				"bonus_hp_regen"							"1 1.15 1.3 1.45 1.6 1.75 2.0"
 			}
 			"03"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"stack_limit"						"5 10 15 20"
+				"stack_limit"						"5 10 15 20 25 30 35"
 				"LinkedSpecialBonus"				"special_bonus_unique_timbersaw_2"
 			}
 			"04"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"stack_duration"					"10 13 16 19"
+				"stack_duration"					"10 13 16 19 22 25 28"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -178,22 +178,24 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 		"HasScepterUpgrade"			"1"
 		"AbilitySound"					"Hero_Shredder.Chakram.Cast"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200 1200 1200"
-		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastRange"				"1200 1200 1200 1200 1200"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0 8.0 8.0"
+		"AbilityCooldown"				"8.0 8.0 8.0 8.0 8.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 140 200"
+		"AbilityManaCost"				"80 140 200 260 320"
 
 
 		// Special
@@ -208,17 +210,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"radius"				"200.0"
+				"radius"				"200.0 200.0 200.0 250.0 300.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"pass_damage"			"100 140 180"
+				"pass_damage"			"100 140 180 220 260"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"50 75 100"
+				"damage_per_second"		"50 75 100 125 150"
 			}
 			"05"
 			{
@@ -238,7 +240,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_per_second"		"16 23 30"
+				"mana_per_second"		"16 23 30 37 44"
 			}
 			"09"
 			{
@@ -266,17 +268,17 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200 1200 1200"
-		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastRange"				"1200 1200 1200 1200 1200"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0 8.0 8.0"
+		"AbilityCooldown"				"8.0 8.0 8.0 8.0 8.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 140 200"
+		"AbilityManaCost"				"80 140 200 260 320"
 
 
 		// Special
@@ -291,17 +293,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"radius"				"200.0"
+				"radius"				"200.0 200.0 200.0 250.0 300.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"pass_damage"			"100 140 180"
+				"pass_damage"			"100 140 180 220 260"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"50 75 100"
+				"damage_per_second"		"50 75 100 125 150"
 			}
 			"05"
 			{
@@ -321,7 +323,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_per_second"		"16 23 30"
+				"mana_per_second"		"16 23 30 37 44"
 			}
 			"09"
 			{
