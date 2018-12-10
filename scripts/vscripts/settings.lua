@@ -48,7 +48,7 @@ MINIMUM_ATTACK_SPEED = 10
 -- Fill this table up with the required XP per level if you want to change it
 XP_PER_LEVEL_TABLE = {}
 for i=1,MAX_LEVEL do
-	XP_PER_LEVEL_TABLE[i] = i * 575
+	XP_PER_LEVEL_TABLE[i] = i * 380
 end
 
 -- Generated from template

@@ -479,7 +479,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		//Dynamic Cast Range
-		"AbilityCastRange"				"1150"
+		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0"
 		
 		// Time		
@@ -536,7 +536,7 @@
 			"08"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"multicast_cast_range_bonus"		"150 200 250 300 350 400 450"
+				"multicast_cast_range_bonus"		"700"
 			}
 			//Based on Multicast Level
 			"09"
@@ -861,7 +861,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"				"ability_datadriven"
+		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -885,11 +885,11 @@
 	
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
-		"Precache"
+		"precache"
 		{
 			"partical"				"particles/items2_fx/mjollnir_shield.vpcf"
 			"partical"				"particles/units/heroes/hero_razor/razor_unstable_current.vpcf"
-			"soundfile"				"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
 		}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -950,8 +950,8 @@
 			}
 			"11"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"20.0"
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"20"
 			}
 		}
 		
@@ -977,15 +977,17 @@
 						"Damage"		"%radius_damage"
 					}
 				}
-				
+
 				"EffectName"			"particles/items2_fx/mjollnir_shield.vpcf"
 				"EffectAttachType"		"follow_origin"
+				
 			}
 			
 			"modifier_lightning_shield_multicast_1"
 			{
 				"Duration"				"%duration"
 				"ThinkInterval"			"%lightning_interval_multicast_1"
+				"Hidden"				"1"
 				
 				"OnIntervalThink"
 				{
@@ -1003,7 +1005,7 @@
 						{
 							"FireSound"
 							{
-								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"EffectName"		"Hero_Razor.UnstableCurrent.Strike"
 								"Target"			"TARGET"
 							}
 							"TrackingProjectile"
@@ -1025,6 +1027,7 @@
 			{
 				"Duration"				"%duration"
 				"ThinkInterval"			"%lightning_interval_multicast_2"
+				"Hidden"				"1"
 				
 				"OnIntervalThink"
 				{
@@ -1042,7 +1045,7 @@
 						{
 							"FireSound"
 							{
-								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"EffectName"		"Hero_Razor.UnstableCurrent.Strike"
 								"Target"			"TARGET"
 							}
 							"TrackingProjectile"
@@ -1064,6 +1067,7 @@
 			{
 				"Duration"				"%duration"
 				"ThinkInterval"			"%lightning_interval_multicast_3"
+				"Hidden"				"1"
 				
 				"OnIntervalThink"
 				{
@@ -1081,7 +1085,7 @@
 						{
 							"FireSound"
 							{
-								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"EffectName"		"Hero_Razor.UnstableCurrent.Strike"
 								"Target"			"TARGET"
 							}
 							"TrackingProjectile"
@@ -1103,6 +1107,7 @@
 			{
 				"Duration"				"%duration"
 				"ThinkInterval"			"%lightning_interval_multicast_4"
+				"Hidden"				"1"
 				
 				"OnIntervalThink"
 				{
@@ -1120,7 +1125,7 @@
 						{
 							"FireSound"
 							{
-								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"EffectName"		"Hero_Razor.UnstableCurrent.Strike"
 								"Target"			"TARGET"
 							}
 							"TrackingProjectile"
@@ -1142,6 +1147,7 @@
 			{
 				"Duration"				"%duration"
 				"ThinkInterval"			"%lightning_interval_multicast_5"
+				"Hidden"				"1"
 				
 				"OnIntervalThink"
 				{
@@ -1159,7 +1165,7 @@
 						{
 							"FireSound"
 							{
-								"EffectName"		"sounds/weapons/hero/zuus/lightning_bolt.vsnd"
+								"EffectName"		"Hero_Razor.UnstableCurrent.Strike"
 								"Target"			"TARGET"
 							}
 							"TrackingProjectile"
@@ -1184,6 +1190,12 @@
 				"Target"		"TARGET"
 				"ScriptFile"	"abilities/ogre_magi/lightning_shield.lua"
 				"Function"		"LightningShield"
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.Mjollnir.Activate"
+				"Target"		"CASTER"
 			}
 		}
 		
@@ -1215,6 +1227,7 @@
 		"MaxLevel"						"1"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"ogre_magi_unrefined_fireblast"
+		"IsGrantedByScepter"			"1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -1223,14 +1236,13 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"6"
+		"AbilityCooldown"				"12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"400"
 		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"275"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------

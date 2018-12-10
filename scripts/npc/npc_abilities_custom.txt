@@ -2,6 +2,7 @@
 //Custom
 #base "abilities/custom/huskar_custom.txt"
 #base "abilities/custom/ogre_magi_custom.txt"
+#base "abilities/custom/silencer_custom.txt"
 
 "DOTAAbilities"
 {
@@ -239,6 +240,7 @@
 			}
 		}
 	}
+	
 	//=================================================================================================================
 	// Lesser Nightcrawler: Pounce
 	//=================================================================================================================

@@ -120,6 +120,36 @@ function Multicast(keys)
 					for i=2,multicast do
 						ability_cast:ApplyDataDrivenModifier( caster, caster, "modifier_bloodlust_multicast_action", {} )
 					end
+				--
+				elseif ability_cast:GetAbilityName() == "ogre_magi_unrefined_fireblast" then
+					local stun_duration = ability_cast:GetLevelSpecialValueFor( "stun_duration", ability_cast:GetLevel() - 1 )
+					local multicast_delay = ability_cast:GetLevelSpecialValueFor( "multicast_delay", ability_cast:GetLevel() - 1 )
+					-- Second instance of stun and damage
+					ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+					if multicast == 2 then
+						EmitSoundOn(keys.sound1, target)
+					end
+					-- Third instance of stun and damage
+					if multicast > 2 then
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						if multicast == 3 then
+							EmitSoundOn(keys.sound2, target)
+						end
+					end
+					-- Fourth instance of stun and damage
+					if multicast > 3 then
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						EmitSoundOn(keys.sound3, target)
+					end
+					-- Fifth
+					if multicast > 4 then
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						ability_cast:CastAbilityOnTarget( target, ability_cast, 1);
+						EmitSoundOn(keys.sound3, target)
+						EmitSoundOn(keys.sound2, target)
+					end
 				end
 			end
 			local cd = ability_cast:GetCooldownTimeRemaining()
