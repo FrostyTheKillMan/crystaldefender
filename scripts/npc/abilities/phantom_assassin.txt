@@ -92,19 +92,15 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1000 1000 1000 1000 1000 1000 1000"
-		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+		"AbilityCastPoint"				"0.25"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18 16 14 12 10 8 6"
-
-		// Duration
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"				"3 3 3 3 4 5 6"
-
+		"AbilityCooldown"				"15 13 11 9 7 5 3"
+		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 50 50 50 45 40 35"
+		"AbilityManaCost"				"35 40 45 50 55 60 65"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -113,18 +109,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"130 130 130 160 200 250 350"
+				"bonus_attack_speed"	"100 125 150 175 200 225 250"
 			}
 			
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_max_attack_count"	"4 4 4 4 6 8 10"
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2.25 2.25 2.25 2.5 2.75 3.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_range"			"1000 1000 1000 1000 1000 1000 1000"
+				"tooltip_range"			"1000"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -137,8 +133,19 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"5192"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"					"5192"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"75 70 55 40 25 10 5"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30"
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -153,12 +160,17 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"transparency_fade"			"0.0"
+				"duration"			"25"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"1600 1600 1600 1600 1600 1600 1600"
+				"radius"				"600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_duration"			"0.75"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -187,13 +199,13 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_chance"				"15 13 7 3 1"
+				"crit_chance"				"15 15 13 13 11"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_bonus"				"230 340 450 560 670"
+				"crit_bonus"				"240 350 460 570 680"
 			}
 		}
 	}
