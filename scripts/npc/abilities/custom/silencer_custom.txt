@@ -208,7 +208,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"intellect_damage_pct"	"16 20 24 28 32 36 40"
-				"LinkedSpecialBonus"	"special_bonus_unique_silencer"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_2"
 			}
 			"02"
 			{
@@ -475,43 +475,102 @@
 		}
 	}
 	
-	"intelligence_Steal"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"silencer_glaives_of_wisdom"
-		"ScriptFile"					"abilities/silencer/intelligence_steal.lua"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"silencer_intel_steal_datadriven"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_datadriven"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityTextureName"			"silencer_glaives_of_wisdom"
 
-		// Precache
-		//-------------------------------------------------------------------------------------------------------------
-		"precache"
-		{
-			"particle"			"particles/units/heroes/hero_pudge/pudge_fleshheap_count.vpcf"
-		}		
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"900"
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"intelligence_steal_hero"		"2"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"intelligence_steal_creep"		"0.1 0.2 0.3 0.4 0.5 0.6 0.7"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"900"
-			}
-		}
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"			"FIELD_INTEGER"
+                "int_steal_range"		"925"		
+            }
+            "02"
+            {
+                "var_type"			"FIELD_FLOAT"
+                "int_steal_amount"		"0.1 0.15 0.20 0.25 0.30 0.35 0.40"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_5"
+            }
+            "03"
+            {
+                "var_type"			"FIELD_FLOAT"
+                "max_stacks"		"3000"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_silencer_stolen_intel_datadriven"
+            {
+                "Passive"		"1"
+                "IsHidden"		"1"
+
+                "Aura" 			"modifier_silencer_stolen_intel_datadriven_debuff"
+                "Aura_Radius" 	"%int_steal_range"
+                "Aura_Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+            }
+
+            "modifier_silencer_stolen_intel_datadriven_debuff"
+            {
+                "IsDebuff"	"1"
+                "IsHidden"	"1"
+
+                "OnDeath"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"			"scripts/vscripts/abilities/pudge/flesh_heap.lua"
+                        "Function"				"modifier_flesh_heap_increment"
+                        "modifier"				"modifier_silencer_stolen_intel_datadriven_buff"
+                        "bonus_modifier"		"special_bonus_unique_silencer_5"
+                    }
+                }
+            }
+
+            "modifier_silencer_stolen_intel_datadriven_buff"
+            {
+                "Passive"   "0"
+                "IsPurgable"    "0"
+                "IsHidden"	"0"
+                "Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%int_steal_amount"
+                }
+            }
+
+            "modifier_silencer_stolen_intel_datadriven_passive"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "OnKill" {
+                    "RunScript"
+                    {
+                        "ScriptFile"		"scripts/vscripts/abilities/pudge/flesh_heap.lua"
+                        "Function"			"modifier_flesh_heap_increment_check"
+                        "modifier"			"modifier_silencer_stolen_intel_datadriven_buff"
+                        "target_modifier" 	"modifier_silencer_stolen_intel_datadriven_debuff"
+                    }
+                }
+            }
+        }
 	}
+	
 	"silencer_global_silence_datadriven"
 	{
 		// General
@@ -522,6 +581,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"2"
 		"AbilityTextureName"			"silencer_global_silence"
+		"LevelsBetweenUpgrades"         "6"
+		"MaxLevel"                      "5"
 
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -542,7 +603,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"250 375 500"
+		"AbilityManaCost"				"250 375 500 625 750"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -622,7 +683,18 @@
 
 				"States"
 				{
-					"MODIFIER_STATE_SOFT_DISARMED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_global_silence_damage_datadriven"
+			{
+				"IsDebuff"	"1"
+				"Duration"	"%duration"
+				"IsPurgable"	"1"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"		"150.0"
 				}
 			}
 		}
@@ -668,7 +740,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
+				"value"				"18"
 			}
 		}
 	}
@@ -691,7 +763,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"20"
+				"value"				"0"
 			}
 		}
 	}
@@ -737,7 +809,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"1"
+				"value"				"0.35"
 			}
 		}
 	}

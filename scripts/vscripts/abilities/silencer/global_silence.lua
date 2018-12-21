@@ -6,7 +6,7 @@ function GlobalSilence( keys )
 	local duration_disarm = ability:GetLevelSpecialValueFor("duration_disarm", (ability:GetLevel()))
 	local talentDisarm = caster:FindAbilityByName("special_bonus_unique_silencer"):GetLevel()
 	local talentCurse = caster:FindAbilityByName("special_bonus_unique_silencer_6"):GetLevel()
-	local talentSteal = caster:FindAbilityByName("special_bonus_unique_silencer_7"):GetLevel()
+	local talentDamage = caster:FindAbilityByName("special_bonus_unique_silencer_7"):GetLevel()
 	local arcaneCurse = caster:FindAbilityByName("silencer_curse_of_the_silent_datadriven")
 	local radius = 20000
 
@@ -22,8 +22,8 @@ function GlobalSilence( keys )
 					if talentCurse == 1 then
 						arcaneCurse:ApplyDataDrivenModifier( caster, enemy, "modifier_curse_debuff_datadriven", {duration = 5})
 					end
-					if talentSteal == 1 then
-						
+					if talentDamage == 1 then
+						ability:ApplyDataDrivenModifier( caster, enemy, "modifier_global_silence_damage_datadriven", {duration = duration})	
 					end
 					ability:ApplyDataDrivenModifier( caster, enemy, "modifier_global_silence_datadriven", {duration = duration})	
 				end

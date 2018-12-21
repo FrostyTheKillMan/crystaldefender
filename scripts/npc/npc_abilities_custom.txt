@@ -1,7 +1,9 @@
 // Dota Heroes File
 //Custom
 #base "abilities/custom/huskar_custom.txt"
+#base "abilities/custom/necrolyte_custom.txt"
 #base "abilities/custom/ogre_magi_custom.txt"
+#base "abilities/custom/pudge_custom.txt"
 #base "abilities/custom/silencer_custom.txt"
 
 "DOTAAbilities"
